@@ -18,10 +18,10 @@ To compile the project, use the following command:
 
 gcc -Wall -Wextra -Werror -pedantic *.c -o sort
 
-Usage
+## Usage
 After compiling, you can run the program to see the sorting algorithms in action. The program will print the array or list at each step where elements are swapped.
 
-Big O Notations
+## Big O Notations
 Bubble Sort:
 
 Best: O(n)
@@ -42,13 +42,17 @@ Quick Sort:
 Best: O(n log n)
 Average: O(n log n)
 Worst: O(n^2)
-Description
-Bubble Sort: A simple comparison-based algorithm where adjacent elements are swapped if they are in the wrong order. This process is repeated until the list is sorted.
+## Description
+## Bubble Sort:
+A simple comparison-based algorithm where adjacent elements are swapped if they are in the wrong order. This process is repeated until the list is sorted.
 
-Insertion Sort: Builds a sorted section of the array one element at a time, inserting each new element into its proper position within the sorted section.
+## Insertion Sort:
+Builds a sorted section of the array one element at a time, inserting each new element into its proper position within the sorted section.
 
-Selection Sort: Divides the array into a sorted and unsorted region, repeatedly selecting the smallest element from the unsorted region and moving it to the end of the sorted region.
+## Selection Sort:
+Divides the array into a sorted and unsorted region, repeatedly selecting the smallest element from the unsorted region and moving it to the end of the sorted region.
 
-Quick Sort: Uses a pivot element to partition the array into two sub-arrays, recursively sorting the sub-arrays. The Lomuto partition scheme is used in this implementation.
+## Quick Sort:
+Uses a pivot element to partition the array into two sub-arrays, recursively sorting the sub-arrays. The Lomuto partition scheme is used in this implementation.
 
 This project utilizes print_array and print_list helper functions to visualize each step of the sorting process, aiding in understanding how each algorithm works.
