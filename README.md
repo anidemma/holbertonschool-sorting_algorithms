@@ -1,16 +1,13 @@
-```markdown
 # Sorting Algorithms Project
 
-This project demonstrates the implementation of various sorting algorithms in C, including Bubble Sort, Insertion Sort, Selection Sort, and Quick Sort.
+This project demonstrates the implementation of various sorting algorithms in C. It includes Bubble Sort, Insertion Sort, Selection Sort, and Quick Sort. Each algorithm is implemented with the goal of understanding how they work and their efficiency in sorting data.
 
 ## Project Structure
 
-- `0-bubble_sort.c`: Implementation of Bubble Sort.
-- `1-insertion_sort_list.c`: Implementation of Insertion Sort for doubly linked lists.
-- `2-selection_sort.c`: Implementation of Selection Sort.
-- `3-quick_sort.c`:
-
- Implementation of Quick Sort.
+- `0-bubble_sort.c`: Implementation of the Bubble Sort algorithm.
+- `1-insertion_sort_list.c`: Implementation of the Insertion Sort algorithm for doubly linked lists.
+- `2-selection_sort.c`: Implementation of the Selection Sort algorithm.
+- `3-quick_sort.c`: Implementation of the Quick Sort algorithm using the Lomuto partition scheme.
 - `print_array.c`: Helper function to print arrays.
 - `print_list.c`: Helper function to print doubly linked lists.
 - `sort.h`: Header file containing function prototypes and type definitions.
@@ -21,125 +18,38 @@ To compile the project, use the following command:
 
 ```bash
 gcc -Wall -Wextra -Werror -pedantic *.c -o sort
-```
 
-## Usage
+Usage
+After compiling, you can run the program to see the sorting algorithms in action. The program will print the array or list at each step where elements are swapped.
 
-Run the compiled executable and provide the array or list to be sorted.
+Big O Notations
+Bubble Sort:
 
-## Big O Notations
+Best: O(n)
+Average: O(n^2)
+Worst: O(n^2)
+Insertion Sort:
 
-- **Bubble Sort:**
-  - Best: O(n)
-  - Average: O(n^2)
-  - Worst: O(n^2)
+Best: O(n)
+Average: O(n^2)
+Worst: O(n^2)
+Selection Sort:
 
-- **Insertion Sort:**
-  - Best: O(n)
-  - Average: O(n^2)
-  - Worst: O(n^2)
+Best: O(n^2)
+Average: O(n^2)
+Worst: O(n^2)
+Quick Sort:
 
-- **Selection Sort:**
-  - Best: O(n^2)
-  - Average: O(n^2)
-  - Worst: O(n^2)
+Best: O(n log n)
+Average: O(n log n)
+Worst: O(n^2)
+Description
+Bubble Sort: A simple comparison-based algorithm where adjacent elements are swapped if they are in the wrong order. This process is repeated until the list is sorted.
 
-- **Quick Sort:**
-  - Best: O(n log n)
-  - Average: O(n log n)
-  - Worst: O(n^2)
-```
+Insertion Sort: Builds a sorted section of the array one element at a time, inserting each new element into its proper position within the sorted section.
 
-## Explanation:
+Selection Sort: Divides the array into a sorted and unsorted region, repeatedly selecting the smallest element from the unsorted region and moving it to the end of the sorted region.
 
-- **Bubble Sort:** We repeatedly swap adjacent elements if they are in the wrong order.
-- **Insertion Sort:** We build the sorted list one element at a time by shifting larger elements.
-- **Selection Sort:** We repeatedly select the smallest element and swap it to its correct position.
-- **Quick Sort:** We use a pivot to partition the array and recursively sort the subarrays.
+Quick Sort: Uses a pivot element to partition the array into two sub-arrays, recursively sorting the sub-arrays. The Lomuto partition scheme is used in this implementation.
 
-These implementations include printing steps for educational purposes, using `print_array` and `print_list` helper functions provided in your project.
-
-### Helper Files
-
-Here's a minimal example of how `print_array.c`, `print_list.c`, and `sort.h` might look:
-
-**`print_array.c`**
-
-```c
-#include <stdio.h>
-#include "sort.h"
-
-/**
- * print_array - Prints an array of integers.
- * @array: The array to be printed.
- * @size: The size of the array.
- */
-void print_array(const int *array, size_t size)
-{
-    size_t i;
-
-    for (i = 0; i < size; i++)
-    {
-        if (i > 0)
-            printf(", ");
-        printf("%d", array[i]);
-    }
-    printf("\n");
-}
-```
-
-**`print_list.c`**
-
-```c
-#include <stdio.h>
-#include "sort.h"
-
-/**
- * print_list - Prints a list of integers.
- * @list: The list to be printed.
- */
-void print_list(const listint_t *list)
-{
-    while (list)
-    {
-        if (list->prev)
-            printf(", ");
-        printf("%d", list->n);
-        list = list->next;
-    }
-    printf("\n");
-}
-```
-
-**`sort.h`**
-
-```c
-#ifndef SORT_H
-#define SORT_H
-
-#include <stddef.h>
-
-/**
- * struct listint_s - Doubly linked list node
- *
- * @n: Integer stored in the node
- * @prev: Pointer to the previous element of the list
- * @next: Pointer to the next element of the list
- */
-typedef struct listint_s
-{
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
-} listint_t;
-
-void print_array(const int *array, size_t size);
-void print_list(const listint_t *list);
-
-void bubble_sort(int *array, size_t size);
-void insertion_sort_list(listint_t **list);
-void selection_sort(int *array, size_t size);
-void quick_sort(int *array, size_t size);
-
-#endif /* SORT_H */
-```
+This project utilizes print_array and print_list helper functions to visualize each step of the sorting process, aiding in understanding how each algorithm works.
