@@ -16,7 +16,6 @@ This project demonstrates the implementation of various sorting algorithms in C.
 
 To compile the project, use the following command:
 
-```
 gcc -Wall -Wextra -Werror -pedantic *.c -o sort
 
 Usage
