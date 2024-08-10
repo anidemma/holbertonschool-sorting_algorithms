@@ -1,7 +1,7 @@
 #include "sort.h"
 void selection_sort(int *array, size_t size)
 {
-  size_t i = 0, j = 0, min;
+  size_t i = 0, j = 0, min = 0;
   int tmp;
 
   for (; i < size; i++)
