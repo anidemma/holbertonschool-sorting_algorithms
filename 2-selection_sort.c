@@ -4,7 +4,7 @@ void selection_sort(int *array, size_t size)
   size_t i = 0, j = 0, min = 0;
   int tmp = 0;
 
-  for (; i < size; i++)
+  for (i = 0; i < size; i++)
     {
       min = i;
       for (j = i + 1; j < size; j++)
