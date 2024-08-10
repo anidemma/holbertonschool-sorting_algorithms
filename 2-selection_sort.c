@@ -1,10 +1,10 @@
 #include "sort.h"
 void selection_sort(int *array, size_t size)
 {
-  size_t i, j, min;
+  size_t i = 0, j = 0, min;
   int tmp;
 
-  for (i = 0; i < size; i++)
+  for (; i < size; i++)
     {
       min = i;
       for (j = i + 1; j < size; j++)
