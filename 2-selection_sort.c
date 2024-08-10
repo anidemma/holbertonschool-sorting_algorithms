@@ -1,9 +1,14 @@
 #include "sort.h"
+/**
+ * selection_sort - functin
+ * @array: array
+ * @size: size
+ */
 void selection_sort(int *array, size_t size)
 {
 	size_t i = 0, j = 0, min = 0;
 	int tmp = 0;
-	
+
 	for (i = 0; i < size; i++)
 	{
 		min = i;
